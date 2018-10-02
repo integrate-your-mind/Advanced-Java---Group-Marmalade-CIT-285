@@ -1,0 +1,77 @@
+package sample;
+
+import java.util.UUID;
+
+
+abstract class Account {
+    UUID mAccountNumber;
+    String mFirstName;
+    String mLastName;
+    String mCellPhoneNumber;
+    String mEmailAddress;
+    String mPassword;
+
+    public UUID getAccountNumber() {
+        return mAccountNumber;
+    }
+
+    public String getFirstName() {
+        return mFirstName;
+    }
+
+    public String getLastName() {
+        return mLastName;
+    }
+
+    public String getCellPhoneNumber() {
+        return mCellPhoneNumber;
+    }
+
+    public String getEmailAddress() {
+        return mEmailAddress;
+    }
+
+    static class Builder<C extends Account,
+            B extends Builder <C, B>> {
+        C obj;
+
+        Builder(C constructedObj) {
+            this.obj = constructedObj;
+        }
+
+        B setAccountNumber(UUID id) {
+            obj.mAccountNumber = id;
+            return (B) this;
+        }
+
+        B setFirstName(String firstName) {
+            obj.mFirstName = firstName;
+            return (B) this;
+        }
+
+        B setLastName(String lastName) {
+            obj.mLastName = lastName;
+            return (B) this;
+        }
+
+        B setCellPhoneNumber(String cellPhoneNumber) {
+            obj.mCellPhoneNumber = cellPhoneNumber;
+            return (B) this;
+        }
+
+        B setEmailAddress(String emailAddress) {
+            obj.mEmailAddress = emailAddress;
+            return (B) this;
+        }
+
+        B setPassword(String password) {
+            obj.mPassword = password;
+            return (B) this;
+        }
+
+        C build() {
+            return obj;
+        }
+
+    }
+}
