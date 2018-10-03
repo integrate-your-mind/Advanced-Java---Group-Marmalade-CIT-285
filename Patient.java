@@ -1,11 +1,10 @@
-/*
- * Copyright (c) Roman Mondello
- */
 
 package sample;
 
 public class Patient extends Account {
-
+    /*
+ *  Roman Mondello
+ */
     protected String mInsuranceNumber;
     protected TestResult[] mTestResults;
     protected Appointment[] mAppointments;
@@ -71,3 +70,6 @@ public class Patient extends Account {
         }
     }
 }
+/*
+ *  Roman Mondello
+ */
