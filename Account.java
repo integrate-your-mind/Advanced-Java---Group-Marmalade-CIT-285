@@ -1,7 +1,3 @@
-/*
- * Roman Mondello
- */
-
 package sample;
 
 import com.oracle.tools.packager.Log;
@@ -11,7 +7,9 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 
-
+/*
+ * Roman Mondello
+ */
 public abstract class Account implements Serializable {
     protected UUID mAccountNumber;
     protected String mFirstName;
@@ -124,3 +122,6 @@ public abstract class Account implements Serializable {
 
     }
 }
+/*
+ * Roman Mondello
+ */
