@@ -19,8 +19,8 @@ public class Patient extends Account {
         return mInsuranceNumber;
     }
 
-    public static class Builder<C extends Patient,
-            B extends Builder <C, B>> extends
+    public static class PatientBuilder<C extends Patient,
+            B extends PatientBuilder <C, B>> extends
             AccountBuilder <C, B> {
         public Builder() {
             this((C) new Patient());
